@@ -1,0 +1,22 @@
+{
+  "name": "faiglab-ibf",
+  "version": "1.0.0",
+  "description": "FAIG LAB - IES Bernat el Ferrer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build required for static HTML'",
+    "lint": "echo 'No linting configured'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "faiglab",
+    "education",
+    "makerspace"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
