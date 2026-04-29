@@ -120,6 +120,58 @@
         .value-item h3{font-family:'Syncopate';margin-bottom:10px;font-size:.8rem;color:var(--text);}
         .value-item p{opacity:.5;font-size:.82rem;color:var(--text);}
 
+        /* ══ FORMACIÓ ══ */
+        .formacio-hero{position:relative;height:28vh;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;}
+        .formacio-overlay{color:#fff;text-align:center;}
+        .formacio-overlay h1{font-family:'Syncopate';font-size:clamp(1.8rem,5vw,3rem);margin-bottom:12px;}
+        .formacio-overlay p{letter-spacing:3px;font-size:.82rem;opacity:.6;}
+
+        .formacio-content{padding:70px 5%;max-width:1200px;margin:0 auto;}
+        .formacio-block{margin-bottom:55px;max-width:700px;}
+        .formacio-block h2{font-family:'Syncopate';margin-bottom:14px;color:var(--text);font-size:1.1rem;}
+        .formacio-block p{opacity:.65;line-height:1.9;color:var(--text);}
+
+        /* Nivells */
+        .nivells-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin:50px 0;}
+        .nivell-card{background:var(--card-bg);border-radius:12px;padding:32px 28px;position:relative;overflow:hidden;transition:transform .3s;}
+        .nivell-card:hover{transform:translateY(-5px);}
+        .nivell-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--accent);}
+        .nivell-num{font-family:'Syncopate';font-size:3rem;font-weight:700;color:var(--accent);opacity:.15;position:absolute;top:16px;right:20px;line-height:1;}
+        .nivell-icon{font-size:1.8rem;margin-bottom:16px;display:block;}
+        .nivell-card h3{font-family:'Syncopate';font-size:.82rem;margin-bottom:10px;color:var(--text);}
+        .nivell-card p{font-size:.82rem;opacity:.6;line-height:1.7;color:var(--text);}
+        .nivell-duration{display:inline-block;margin-top:16px;font-size:.6rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--accent);}
+
+        /* Timeline de procés */
+        .proces-timeline{margin:50px 0;}
+        .proces-timeline h2{font-family:'Syncopate';font-size:1.1rem;margin-bottom:36px;color:var(--text);}
+        .timeline-steps{display:flex;flex-direction:column;gap:0;}
+        .timeline-step{display:grid;grid-template-columns:60px 1fr;gap:24px;position:relative;}
+        .timeline-step:not(:last-child)::after{content:'';position:absolute;left:29px;top:50px;width:2px;height:calc(100% - 10px);background:var(--border);}
+        .step-circle{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Syncopate';font-size:.75rem;font-weight:700;flex-shrink:0;z-index:1;}
+        .step-body{padding:10px 0 40px;}
+        .step-body h4{font-family:'Syncopate';font-size:.8rem;color:var(--text);margin-bottom:6px;}
+        .step-body p{font-size:.82rem;opacity:.55;line-height:1.7;color:var(--text);}
+
+        /* FAQ Acordió */
+        .faq-section{margin:50px 0;}
+        .faq-section h2{font-family:'Syncopate';font-size:1.1rem;margin-bottom:36px;color:var(--text);}
+        .faq-item{border-bottom:1px solid var(--border);}
+        .faq-question{display:flex;justify-content:space-between;align-items:center;padding:20px 0;cursor:pointer;font-weight:700;font-size:.85rem;color:var(--text);user-select:none;gap:16px;}
+        .faq-question:hover{color:var(--accent);}
+        .faq-icon{font-size:1.1rem;transition:transform .3s;flex-shrink:0;color:var(--accent);}
+        .faq-item.open .faq-icon{transform:rotate(45deg);}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;}
+        .faq-answer p{font-size:.84rem;opacity:.6;line-height:1.8;padding-bottom:20px;color:var(--text);}
+        .faq-item.open .faq-answer{max-height:300px;}
+
+        /* CTA Formació */
+        .formacio-cta{background:var(--text);color:var(--bg);border-radius:12px;padding:55px 48px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;margin:60px 0;}
+        .formacio-cta h3{font-family:'Syncopate';font-size:clamp(1rem,2.5vw,1.6rem);line-height:1.1;}
+        .formacio-cta p{opacity:.5;font-size:.82rem;margin-top:10px;}
+        .btn-cta-inv{padding:16px 40px;background:var(--bg);color:var(--text);font-weight:900;border:none;border-radius:50px;font-size:.72rem;cursor:pointer;transition:.3s;white-space:nowrap;}
+        .btn-cta-inv:hover{background:var(--accent);color:#fff;}
+
         /* CONTACT */
         .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
         .contact-info h3{font-family:'Syncopate';font-size:1rem;margin-bottom:20px;color:var(--text);}
@@ -134,14 +186,6 @@
         .hours-row{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:10px;color:var(--text);}
         .hours-row span:first-child{opacity:.5;}
         .hours-row span:last-child{font-weight:700;}
-
-        /* TESTIMONIALS (reutilitzat per a cites) */
-        .testimonials{background:var(--gray);padding:80px 0;}
-        .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px;max-width:1200px;margin:0 auto;padding:0 5%;}
-        .testimonial{background:var(--panel);padding:30px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.06);text-align:center;}
-        .testimonial p{font-style:italic;margin-bottom:18px;opacity:.7;color:var(--text);font-size:.88rem;line-height:1.7;}
-        .testimonial .t-author{font-weight:700;font-size:.8rem;color:var(--accent);}
-        .testimonial .t-role{font-size:.7rem;opacity:.4;color:var(--text);margin-top:3px;}
 
         /* SCROLL TOP */
         #scrollTop{position:fixed;bottom:26px;right:22px;width:44px;height:44px;background:var(--text);color:var(--bg);border:none;border-radius:50%;font-size:1rem;cursor:pointer;z-index:900;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;pointer-events:none;}
@@ -170,6 +214,7 @@
             .stats-strip{grid-template-columns:repeat(2,1fr);}
             .stat-item:nth-child(2){border-right:none;}
             .contact-grid{grid-template-columns:1fr;}
+            .formacio-cta{flex-direction:column;text-align:center;}
         }
         @media(max-width:768px){
             nav{position:absolute;top:100%;left:0;width:100%;background:var(--panel);display:none;flex-direction:column;padding:20px 0;border-bottom:1px solid var(--border);}
@@ -179,28 +224,11 @@
             .editorial-strip{grid-template-columns:1fr;height:auto;}
             .editorial-cell{height:220px;}
             .hero-content h1{font-size:2.6rem;}
+            .timeline-step{grid-template-columns:44px 1fr;gap:16px;}
         }
     </style>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- HEADER -->
 <header>
@@ -208,46 +236,19 @@
     <nav id="mainNav">
         <ul>
             <li><a onclick="showPage('home');closeNav()">Inici</a></li>
-            <li><a onclick="showPage('sobre');closeNav()">Qui som</a></li>
+            <li><a onclick="showPage('sobre');closeNav()">Què és el faig lab?</a></li>
             <li><a onclick="showPage('maquines');closeNav()">Les màquines</a></li>
             <li><a onclick="showPage('projectes');closeNav()">Projectes</a></li>
+            <li><a onclick="showPage('formacio');closeNav()">Formació</a></li>
             <li><a onclick="showPage('contacte');closeNav()">Contacte</a></li>
         </ul>
     </nav>
     <div class="header-actions">
-        <button class="dark-toggle" onclick="toggleDark()" title="Mode fosc"></button>
         <button class="menu-toggle" id="menuToggle" onclick="toggleNav()">
             <span></span><span></span><span></span>
         </button>
     </div>
 </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- 404 -->
 <div id="notfound">
@@ -257,31 +258,6 @@
         <button class="btn-nf" onclick="showPage('home')">TORNAR A L'INICI</button>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- ══ HOME ══ -->
 <main id="home" class="section active">
@@ -298,28 +274,6 @@
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- Editorial strip -->
     <div class="editorial-strip">
         <div class="editorial-cell" onclick="showPage('maquines')">
@@ -335,12 +289,6 @@
             <div class="editorial-cell-label"><span>Comunitat</span><h3>PROJECTES<br>REALS</h3></div>
         </div>
     </div>
-
-
-
-
-
-
 
 
 
@@ -373,7 +321,299 @@
             <div class="stat-label">Anys en actiu</div>
         </div>
     </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="creator-pro reveal">
+  <div class="container">
+    
+    <h2 class="creator-title">CREA EL TEU PROJECTE</h2>
+    <p class="creator-sub">Explora què pots fabricar al FAIG LAB segons el teu perfil</p>
+
+    <div class="creator-steps">
+      <div class="step active" data-step="1"><span>01</span><p>Tipus</p></div>
+      <div class="step" data-step="2"><span>02</span><p>Nivell</p></div>
+      <div class="step" data-step="3"><span>03</span><p>Resultat</p></div>
+    </div>
+
+    <div class="creator-selectors">
+
+      <div class="creator-options" id="step1">
+        <button data-value="3d">🧱 Impressió 3D</button>
+        <button data-value="laser">🔥 Tall Làser</button>
+        <button data-value="electronica">⚡ Electrònica</button>
+        <button data-value="disseny">🎨 Disseny</button>
+      </div>
+
+      <div class="creator-options hidden" id="step2">
+        <button data-value="basic">Principiant</button>
+        <button data-value="mitja">Intermedi</button>
+        <button data-value="pro">Avançat</button>
+      </div>
+           <button class="creator-cta" onclick="resetCreator()"> 🔄 FER UN ALTRE PROJECTE</button>
+    </div>
+
+    <div id="creatorResult" class="creator-result hidden"></div>
+
+    <!-- DETALL REPTE -->
+    <div id="challengeDetail" class="creator-result hidden"></div>
+
+  </div>
+</section>
+
+<style>
+    .creator-cta {
+  margin-top:20px;
+  display:inline-block;
+  padding:16px 26px;
+  border-radius:50px;
+  border:1px solid var(--border);
+  background:transparent;
+  cursor:pointer;
+  font-weight:700;
+  transition:.3s;
+  text-decoration:none;
+}
+
+/* hover igual que els altres botons */
+.creator-cta:hover {
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+}
+.creator-pro {padding:120px 0;text-align:center;}
+.creator-title {font-family:'Syncopate';font-size:clamp(1.8rem,4vw,3rem);}
+.creator-sub {opacity:.5;margin:10px 0 60px;text-transform:uppercase;font-size:.75rem;}
+
+.creator-steps {display:flex;justify-content:center;gap:40px;margin-bottom:60px;}
+.step {opacity:.3;transition:.3s;}
+.step.active {opacity:1;}
+
+.creator-options {display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+.creator-options button {
+  padding:16px 26px;
+  border-radius:50px;
+  border:1px solid var(--border);
+  background:transparent;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.creator-options button.selected {
+  background:var(--text);
+  color:var(--bg);
+}
+
+.creator-result {
+  margin-top:60px;
+  padding:40px;
+  background:var(--card-bg);
+  border-radius:16px;
+  animation:fadeIn .4s ease;
+}
+
+.creator-result ul {list-style:none;padding:0;}
+.creator-result li {
+  cursor:pointer;
+  padding:8px;
+  border-radius:8px;
+}
+.creator-result li:hover {background:rgba(255,255,255,.05);}
+
+.hidden {display:none;}
+
+@keyframes fadeIn {
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+</style>
+
+<script>
+    function resetCreator(){
+
+  // reset variables
+  tipus = null;
+  nivell = null;
+
+  // reset UI steps
+  document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+  document.querySelector('.step[data-step="1"]').classList.add("active");
+
+  // reset buttons
+  document.querySelectorAll(".creator-options button")
+    .forEach(b => b.classList.remove("selected"));
+
+  // tornar al pas 1 i 2
+  step1.classList.remove("hidden");
+  step2.classList.add("hidden");
+
+  // amagar resultats
+  result.classList.add("hidden");
+  result.innerHTML = "";
+
+  const detail = document.getElementById("challengeDetail");
+  if(detail){
+    detail.classList.add("hidden");
+    detail.innerHTML = "";
+  }
+}
+let tipus = null;
+let nivell = null;
+
+const step1 = document.getElementById("step1");
+const step2 = document.getElementById("step2");
+const result = document.getElementById("creatorResult");
+const detail = document.getElementById("challengeDetail");
+
+/* 🔥 REPTES AVANÇATS */
+const REPTES = {
+  "3d": {
+    basic: [
+      {nom:"Clauer personalitzat", temps:"1h", material:"PLA", dificultat:1, desc:"Peça simple decorativa"},
+      {nom:"Suport mòbil", temps:"2h", material:"PLA", dificultat:1, desc:"Base estable per telèfon"}
+    ],
+    mitja: [
+      {nom:"Figura articulada", temps:"4h", material:"PLA", dificultat:2, desc:"Parts mòbils simples"},
+      {nom:"Portallapis modular", temps:"3h", material:"PLA", dificultat:2, desc:"Disseny funcional"}
+    ],
+    pro: [
+      {nom:"Engranatges funcionals", temps:"8h", material:"PLA/ABS", dificultat:3, desc:"Sistema mecànic real"},
+      {nom:"Robot base", temps:"12h", material:"mixt", dificultat:3, desc:"Projecte complet"}
+    ]
+  },
+
+  "laser": {
+    basic: [
+      {nom:"Nom gravat", temps:"30min", material:"fusta", dificultat:1, desc:"Gravat simple"},
+      {nom:"Clauer làser", temps:"1h", material:"acrílic", dificultat:1, desc:"Forma bàsica"}
+    ],
+    mitja: [
+      {nom:"Caixa modular", temps:"3h", material:"fusta", dificultat:2, desc:"Muntatge precis"},
+      {nom:"Puzzle làser", temps:"2h", material:"fusta", dificultat:2, desc:"Peça educativa"}
+    ],
+    pro: [
+      {nom:"Maqueta arquitectura", temps:"8h", material:"fusta/DM", dificultat:3, desc:"Alta precisió"},
+      {nom:"Mecanisme articulat", temps:"10h", material:"mixt", dificultat:3, desc:"Moviment real"}
+    ]
+  },
+
+  "electronica": {
+    basic: [
+      {nom:"LED intermitent", temps:"30min", material:"electrònica bàsica", dificultat:1, desc:"Circuit simple"},
+      {nom:"Alarma simple", temps:"1h", material:"Arduino", dificultat:1, desc:"Sensor bàsic"}
+    ],
+    mitja: [
+      {nom:"Semàfor programat", temps:"2h", material:"Arduino", dificultat:2, desc:"Lògica seqüencial"},
+      {nom:"Sensor llum", temps:"2h", material:"electrònica", dificultat:2, desc:"Reacció ambiental"}
+    ],
+    pro: [
+      {nom:"Robot autònom", temps:"10h", material:"Arduino + motors", dificultat:3, desc:"Moviment intel·ligent"},
+      {nom:"Braç robòtic", temps:"15h", material:"mixt", dificultat:3, desc:"Control avançat"}
+    ]
+  },
+
+  "disseny": {
+    basic: [
+      {nom:"Logo simple", temps:"1h", material:"digital", dificultat:1, desc:"Identitat bàsica"},
+      {nom:"Cartell", temps:"1h", material:"digital", dificultat:1, desc:"Composició simple"}
+    ],
+    mitja: [
+      {nom:"Branding", temps:"4h", material:"digital", dificultat:2, desc:"Identitat completa"},
+      {nom:"UI app", temps:"5h", material:"Figma", dificultat:2, desc:"Interfície funcional"}
+    ],
+    pro: [
+      {nom:"Sistema visual complet", temps:"10h", material:"suite disseny", dificultat:3, desc:"Projecte professional"},
+      {nom:"Animació interactiva", temps:"12h", material:"After Effects", dificultat:3, desc:"Alta complexitat"}
+    ]
+  }
+};
+
+/* STEP 1 */
+step1.querySelectorAll("button").forEach(btn => {
+  btn.onclick = () => {
+    step1.querySelectorAll("button").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+
+    tipus = btn.dataset.value;
+
+    step1.classList.add("hidden");
+    step2.classList.remove("hidden");
+    updateStep(2);
+  };
+});
+
+/* STEP 2 */
+step2.querySelectorAll("button").forEach(btn => {
+  btn.onclick = () => {
+    step2.querySelectorAll("button").forEach(b => b.classList.remove("selected"));
+    btn.classList.add("selected");
+
+    nivell = btn.dataset.value;
+
+    mostrarResultat();
+    updateStep(3);
+  };
+});
+
+function updateStep(n){
+  document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+  document.querySelector(`.step[data-step="${n}"]`).classList.add("active");
+}
+
+/* RESULTAT */
+function mostrarResultat(){
+
+  const reptes = REPTES[tipus][nivell];
+
+  result.classList.remove("hidden");
+
+  result.innerHTML = `
+    <h3>Reptes recomanats, clica a baix en el projecte que vols fer⬇⬇⬇</h3>
+    <ul>
+      ${reptes.map((r,i)=>`
+        <li onclick="showDetail(${i})">${r.nom} — ${r.temps}</li>
+      `).join("")}
+    </ul>
+  `;
+
+  window.currentReptes = reptes;
+}
+
+/* DETALL REPTE */
+function showDetail(i){
+  const r = window.currentReptes[i];
+
+  detail.classList.remove("hidden");
+  detail.innerHTML = `
+    <h3>${r.nom}</h3>
+    <p>${r.desc}</p>
+    <p><strong>⏱ Temps:</strong> ${r.temps}</p>
+    <p><strong>🧱 Material:</strong> ${r.material}</p>
+    <p><strong>⭐ Dificultat:</strong> ${"★".repeat(r.dificultat)}</p>
+  `;
+}
+</script>
 </main>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -434,6 +674,82 @@
     </div>
 </main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ══ LES MÀQUINES ══ -->
 <main id="maquines" class="section">
     <div class="cat-hero">
@@ -448,6 +764,19 @@
     </div>
 </main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ══ PROJECTES ══ -->
 <main id="projectes" class="section">
     <div class="cat-hero">
@@ -459,12 +788,156 @@
     </div>
     <div class="container">
         <div class="grid" id="grid-projectes"></div>
-    </div>
-            <h3>PROXIMAMENT.................</h3>
-            <p>EN DESENVOLUPAMENT</p>
+        <div style="text-align:center;padding:80px 0;">
+            <h3 style="font-family:'Syncopate';font-size:1.2rem;color:var(--text);margin-bottom:12px;">PROXIMAMENT</h3>
+            <p style="opacity:.4;font-size:.78rem;letter-spacing:3px;text-transform:uppercase;">EN DESENVOLUPAMENT</p>
         </div>
     </div>
 </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ══ FORMACIÓ ══ -->
+<main id="formacio" class="section">
+
+    <!-- Hero -->
+    <div class="formacio-hero">
+        <div class="formacio-overlay">
+            <h1>FORMACIÓ</h1><!-- FORMACIO_TITOL -->
+            <p>Aprèn a usar el FAIG LAB pas a pas</p><!-- FORMACIO_SUBTITOL -->
+        </div>
+    </div>
+
+    <div class="formacio-content">
+
+        <!-- Bloc intro -->
+        <!-- FORMACIO_INTRO: edita els textos d'introducció aquí -->
+        <section class="formacio-block reveal">
+            <h2>PER QUÈ FER LA FORMACIÓ?</h2>
+            <p>Totes les persones que vulguin utilitzar les màquines del FAIG LAB han de passar primer per un itinerari formatiu. No cal cap coneixement previ: el nostre objectiu és que tothom des de l'alumnat fins al professorat pugui treure el màxim rendiment de l'equipament de forma autònoma i segura.</p>
+        </section>
+
+        <section class="formacio-block reveal">
+            <h2>COM S'ORGANITZA LA FORMACIÓ?</h2>
+            <p>La formació comença amb una petita introducció teòrica per entendre els conceptes bàsics i les eines principals. A continuació, es fan mini pràctiques introductòries per aplicar el que s’ha explicat i familiaritzar-se amb el funcionament.</p>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FAQ -->
+        <!-- FORMACIO_FAQ: afegeix o modifica preguntes i respostes aquí -->
+        <div class="faq-section reveal">
+            <h2>PREGUNTES FREQÜENTS</h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Cal tenir coneixements previs de disseny o informàtica?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>No, en absolut. Les formacions estan dissenyades per a persones sense cap experiència prèvia. Partirem des de zero i avançarem al ritme del grup. El que importa és la curiositat i les ganes d'aprendre.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>La formació té algun cost?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Les formacions són completament gratuïtes per a tot l'alumnat i professorat de l'IES Bernat el Ferrer. Els materials consumibles bàsics per als projectes de pràctiques també estan coberts.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Quan es fan les sessions de formació?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Les sessions es programen en funció de la demanda, tant en horari escolar com en sessions de tarda (dimecres de 16:00 a 18:00 aprox). Escriu-nos per saber la propera data disponible.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>Puc portar el meu propi disseny a la sessió?</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sí! Et recomanem que portis alguna idea o disseny per treballar. Disposem de plantilles i arxius d'exemple per als que comencin de zero, però si ja tens quelcom al cap, millor.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /FORMACIO_FAQ -->
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CTA final -->
+        <!-- FORMACIO_CTA: edita el missatge de crida a l'acció aquí -->
+        <div class="formacio-cta reveal">
+            <div>
+                <h3>PREPARAT PER<br>APRENDRE?</h3>
+                <p>T’esperem!!!!</p>
+            </div>
+            <button class="btn-cta-inv" onclick="showPage('contacte')">CONTACTA'NS →</button>
+        </div>
+        <!-- /FORMACIO_CTA -->
+
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- ══ CONTACTE ══ -->
 <main id="contacte" class="section">
@@ -503,8 +976,11 @@
             </div>
             <div class="contact-form-note">
                 <h3>VOLS SABER MÉS?</h3>
-                 <p>Si tens preguntes o vols col·laborar amb nosaltres, no dubtis a contactar-nos. Estem oberts a visites, col·laboracions i qualsevol iniciativa que enriqueixi el nostre espai.</p>
-                </main>
+                <p>Si tens preguntes no dubtis a contactar-nos. Estem oberts a visites i qualsevol iniciativa que enriqueixi el nostre espai.</p>
+            </div>
+        </div>
+    </div>
+</main>
 
 <footer>
     <div class="footer-grid">
@@ -515,9 +991,10 @@
         </div>
         <div>
             <h4>SECCIONS</h4>
-            <a onclick="showPage('sobre')">Qui Som?</a>
+            <a onclick="showPage('sobre')">Què és el Faig Lab?</a>
             <a onclick="showPage('maquines')">Les màquines</a>
             <a onclick="showPage('projectes')">Projectes</a>
+            <a onclick="showPage('formacio')">Formació</a>
         </div>
         <div>
             <h4>CENTRE</h4>
@@ -537,8 +1014,21 @@
 </footer>
 
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
 <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ══ DADES MÀQUINES ══ */
 const MAQUINES = [
     {
@@ -599,6 +1089,13 @@ const MAQUINES = [
     },
 ];
 
+const PROJECTES = [];
+
+
+
+
+
+
 
 
 
@@ -637,18 +1134,9 @@ function renderMaquines() {
     observeReveal();
 }
 
-
-
-
-
-
-
-
-
-
-
 function renderProjectes() {
     const g = document.getElementById('grid-projectes');
+    if (!PROJECTES.length) { g.innerHTML = ''; return; }
     g.innerHTML = PROJECTES.map(p => `
         <div class="project-card reveal">
             <img src="${p.img}" alt="${p.nom}" class="project-card-img" loading="lazy">
@@ -673,8 +1161,40 @@ function renderProjectes() {
 
 
 
-/* ══ NAVEGACION ══ */
-const VALID = ['home','sobre','maquines','projectes','contacte'];
+
+
+
+
+/* ══ FAQ ACORDIÓ ══ */
+function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ══ NAVEGACIÓ ══ */
+const VALID = ['home','sobre','maquines','projectes','formacio','contacte'];
 function showPage(id) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.getElementById('notfound').classList.remove('active');
@@ -684,6 +1204,7 @@ function showPage(id) {
     closeNav();
     if (id === 'maquines') renderMaquines();
     if (id === 'projectes') renderProjectes();
+    observeReveal();
 }
 function toggleNav() {
     document.getElementById('mainNav').classList.toggle('open');
@@ -704,20 +1225,51 @@ function closeNav() {
 
 
 
-/* ══ REVELACION ══ */
+
+
+
+
+
+
+
+
+/* ══ REVEAL ══ */
 function observeReveal() {
     const obs = new IntersectionObserver(entries => {
         entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, {threshold:.1});
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    document.querySelectorAll('.reveal:not(.visible)').forEach(el => obs.observe(el));
 }
 
-/* ══ TOPE ══ */
+
+
+
+
+
+
+
+
+
+
+
+/* ══ SCROLL TOP ══ */
 window.addEventListener('scroll', () => {
     document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 500);
 });
 
-/* ══ INICIALIZACION ══ */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ══ INIT ══ */
 document.addEventListener('DOMContentLoaded', () => {
     observeReveal();
 });
