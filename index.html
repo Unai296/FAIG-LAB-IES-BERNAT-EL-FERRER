@@ -352,7 +352,6 @@
         <button data-value="3d">🧱 Impressió 3D</button>
         <button data-value="laser">🔥 Tall Làser</button>
         <button data-value="electronica">⚡ Electrònica</button>
-        <button data-value="disseny">🎨 Disseny</button>
       </div>
 
       <div class="creator-options hidden" id="step2">
@@ -488,7 +487,6 @@ const REPTES = {
     ],
     pro: [
       {nom:"Engranatges funcionals", temps:"8h", material:"PLA/ABS", dificultat:3, desc:"Sistema mecànic real"},
-      {nom:"Robot base", temps:"12h", material:"mixt", dificultat:3, desc:"Projecte complet"}
     ]
   },
 
@@ -498,12 +496,10 @@ const REPTES = {
       {nom:"Clauer làser", temps:"1h", material:"acrílic", dificultat:1, desc:"Forma bàsica"}
     ],
     mitja: [
-      {nom:"Caixa modular", temps:"3h", material:"fusta", dificultat:2, desc:"Muntatge precis"},
       {nom:"Puzzle làser", temps:"2h", material:"fusta", dificultat:2, desc:"Peça educativa"}
     ],
     pro: [
       {nom:"Maqueta arquitectura", temps:"8h", material:"fusta/DM", dificultat:3, desc:"Alta precisió"},
-      {nom:"Mecanisme articulat", temps:"10h", material:"mixt", dificultat:3, desc:"Moviment real"}
     ]
   },
 
@@ -518,24 +514,8 @@ const REPTES = {
     ],
     pro: [
       {nom:"Robot autònom", temps:"10h", material:"Arduino + motors", dificultat:3, desc:"Moviment intel·ligent"},
-      {nom:"Braç robòtic", temps:"15h", material:"mixt", dificultat:3, desc:"Control avançat"}
     ]
   },
-
-  "disseny": {
-    basic: [
-      {nom:"Logo simple", temps:"1h", material:"digital", dificultat:1, desc:"Identitat bàsica"},
-      {nom:"Cartell", temps:"1h", material:"digital", dificultat:1, desc:"Composició simple"}
-    ],
-    mitja: [
-      {nom:"Branding", temps:"4h", material:"digital", dificultat:2, desc:"Identitat completa"},
-      {nom:"UI app", temps:"5h", material:"Figma", dificultat:2, desc:"Interfície funcional"}
-    ],
-    pro: [
-      {nom:"Sistema visual complet", temps:"10h", material:"suite disseny", dificultat:3, desc:"Projecte professional"},
-      {nom:"Animació interactiva", temps:"12h", material:"After Effects", dificultat:3, desc:"Alta complexitat"}
-    ]
-  }
 };
 
 /* STEP 1 */
@@ -1128,7 +1108,7 @@ function renderMaquines() {
                 <div class="card-meta">
                     ${m.tags.map(t => `<span class="meta-tag">${t}</span>`).join('')}
                 </div>
-            </div>
+            </div> 
         </div>
     `).join('');
     observeReveal();
